@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 50px
+}
+
+.game-area {
+    box-sizing: border-box;
+    height: 50vh;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+}
+
+.controls-area {
+    font-size: 25px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+    padding: 1px;
+}
+
+.score-area {
+    display: inline;
+    font-size: 20px;
+    
+}
+
+#correct {
+    color: green;
+    font-weight: bold;
+}
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    font-size: 20px;
+    color: black;
+}

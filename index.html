@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+   <h1>Rock Paper Scissors</h1>
+
+   <div class="game-area">
+        <div class="controls-area" >
+            <p>Choose:</p>
+            <button onclick="playGame('rock')">Rock</button>
+            <button onclick="playGame('paper')"> Paper</button>
+            <button onclick="playGame('scissors')"> Scissors</button>
+        </div>
+        
+   </div>
+
+   <div class="score-area">
+        <p class="scores">Wins:<span id="correct">0</span></p>
+        <p class="scores">Losses:<span id="incorrect">0</span></p>
+   </div>
+
+   <footer>
+    <h2>Rules</h2>
+    <p> Scissors wins over Paper | Paper wins over Rock | Rock wins over Scissors</p>
+   </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
