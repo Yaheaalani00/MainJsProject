@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Shows what the computer picked
  */     
         const computerChoiceImage = document.getElementById('computerChoiceImage');
-        computerChoiceImage.src = `images/${computerChoice}.png`;  // Adjust the path here
+        computerChoiceImage.src = `images/${computerChoice}.png`;  
         computerChoiceImage.alt = computerChoice;
 
         
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             (playerChoice === 'scissors' && computerChoice === 'paper')
         ) {
             resultMessage = `You win! Computer chose ${computerChoice}.`;
+            document.getElementById('scoreMessage').innerText = resultMessage;
             wins++;
         } else if (
             (playerChoice === 'rock' && computerChoice === 'paper') ||
@@ -52,25 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
             (playerChoice === 'scissors' && computerChoice === 'rock')
         ) {
             resultMessage = `You lose! Computer chose ${computerChoice}.`;
+            document.getElementById('scoreMessage').innerText = resultMessage;
             losses++;
         } else if (playerChoice === computerChoice) {
             resultMessage = `It's a tie! Both chose ${playerChoice}.`;
+            document.getElementById('scoreMessage').innerText = resultMessage;
         }
 
-        alert(resultMessage);
+
 
         document.getElementById('correct').innerText = wins;
         document.getElementById('incorrect').innerText = losses;
 
-/**
- * Restarts the game
- */
-
-        setTimeout(() => {
-            
-            computerChoiceImage.src = '';
-            computerChoiceImage.alt = '';
-        }, 1000); 
     }
 
 /**
