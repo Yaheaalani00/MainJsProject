@@ -17,9 +17,14 @@
    <div class="game-area">
         <div class="controls-area" >
             <p>Choose:</p>
-            <img src="images/rock.png" alt="Rock" onclick="playGame('rock')">
-            <img src="images/paper.png" alt="Paper" onclick="playGame('paper')">
-            <img src="images/scissors.png" alt="Scissors" onclick="playGame('scissors')">
+            <div class="choice" onclick="playGame('rock')">
+                <img src="images/rock.png" alt="Rock">
+            </div>
+            <div class="choice" onclick="playGame('paper')">
+                <img src="images/paper.png" alt="Paper">
+            </div>
+            <div class="choice" onclick="playGame('scissors')">
+                <img src="images/scissors.png" alt="Scissors">
         </div>
         
    </div>
@@ -28,6 +33,11 @@
         <p class="scores">Wins:<span id="correct">0</span></p>
         <p class="scores">Losses:<span id="incorrect">0</span></p>
    </div>
+
+    <div id="computer-choice-container">
+        <p>Computer's Choice:</p>
+        <img id="computerChoiceImage" alt="">
+    </div>
 
    <footer>
     <h2>Rules</h2>

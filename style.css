@@ -26,6 +26,12 @@ h1 {
     padding: 1px;
 }
 
+.choice {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+}
+
 .score-area {
     display: inline;
     font-size: 20px;
