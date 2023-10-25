@@ -60,7 +60,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('correct').innerText = wins;
         document.getElementById('incorrect').innerText = losses;
+
+        setTimeout(() => {
+            ComputerChoiceImage.src = '';
+            computerChoiceImage.alt = '';
+        }, 1000)
     }
+
+    
 
 }
 
