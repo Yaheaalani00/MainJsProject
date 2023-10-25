@@ -51,6 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (playerChoice === computerChoice) {
             resultMessage = `It's a tie! Both chose ${playerChoice}.`;
         }
+
+        alert (resultMessage);
+
+/**
+ * Updates the score
+ */
+
+        document.getElementById('correct').innerText = wins;
+        document.getElementById('incorrect').innerText = losses;
     }
 
 }
