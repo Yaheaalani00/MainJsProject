@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (
             (playerChoice === 'rock' && getComputerChoice === 'scissors') ||
             (playerChoice === 'paper' && getComputerChoice === 'rock') ||
-            (playerChoice === 'scissors' && getComputerChoice === 'paper') ||
+            (playerChoice === 'scissors' && getComputerChoice === 'paper')
         
         ) {
             resultMessage = `You win! Computer chose ${computerChoice}.`;
@@ -61,14 +61,33 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('correct').innerText = wins;
         document.getElementById('incorrect').innerText = losses;
 
+/**
+ * Restart the game
+ * Clears computers choice image
+ */
         setTimeout(() => {
             ComputerChoiceImage.src = '';
             computerChoiceImage.alt = '';
         }, 1000)
     }
 
+/**
+ * click eventlisteners to the choicees.
+ */
+    let rockChoice = document.getElementById('rockChoice');
+    let paperChoice = document.getElementById('paperChoice');
+    let scissorsChoice = document.getElementById('scissorsChoice');
+
+    if (rockChoice && paperChoice && scissorsChoice) {
+        rockChoice.addEventListener('click', () => playGame('rock'))
+        paperChoice.addEventListener('click', () => playGame('paper'))
+        scissorsChoice.addEventListener('click', () => playGame('scissors'))
+    } else {
+        console.error('One or more choice elemens not found in the DOM')
+    }
+
     
 
-}
+});
 
 
