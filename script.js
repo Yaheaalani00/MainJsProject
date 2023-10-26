@@ -1,33 +1,33 @@
-/**
- * loads the domcontent
- */
+    /**
+    * loads the domcontent
+    */
 
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
-/**
- * Keeps track of wins and losses
- */
+    /**
+    * Keeps track of wins and losses
+    */
     let wins = 0;
     let losses = 0;
 
-/**
- * Random choice for the computer
- */
+    /**
+    * Random choice for the computer
+    */
     function getComputerChoice() {
         const choices = ['rock', 'paper', 'scissors'];
         const randomNumber = Math.floor(Math.random() * 3);
         return choices[randomNumber];
     }
 
-/**
- * Game logic when a player makes a choice 
- */
+    /**
+    * Game logic when a player makes a choice 
+    */
     function playGame(playerChoice) {
         const computerChoice = getComputerChoice();
 
-/**
- * Shows what the computer picked
- */     
+    /**
+    * Shows what the computer picked
+    */     
         const computerChoiceImage = document.getElementById('computerChoiceImage');
         computerChoiceImage.src = `images/${computerChoice}.png`;  
         computerChoiceImage.alt = computerChoice;
@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
         let resultMessage = '';
 
-/**
- * Rules of the game 
- * decides the outcome of each choice
- */
+    /**
+    * Rules of the game 
+    * decides the outcome of each choice
+    */
         if (
             (playerChoice === 'rock' && computerChoice === 'scissors') ||
             (playerChoice === 'paper' && computerChoice === 'rock') ||
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-/**
- * click event listeners for the players choice
- */
+    /**
+    * click event listeners for the players choice
+    */
     const rockChoice = document.getElementById('rockChoice');
     const paperChoice = document.getElementById('paperChoice');
     const scissorsChoice = document.getElementById('scissorsChoice');
